@@ -1,1 +1,5 @@
-console.log("Helo, World!");
+const Employees = require('./lib/employee');
+
+const newTeam = new Employees;
+
+newTeam.start();
