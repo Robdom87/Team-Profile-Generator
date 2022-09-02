@@ -1,58 +1,86 @@
 const Employee = require('../lib/Employee');
+const 
 
-//goals for testing
-//check that all of the validation works
-//check if object is created correctly
-//check that the right amount of objects are being made
-//check if input is desplayed correctly
+//simply test if object intializes properly
+describe("Employee", () => {
+    describe("Initialization", () => {
+      it("should create an Employee object if provided an object with valid arguments", () => {
+        const mockInquirerOutput = {
+            name:'John Doe',
+            id:'01',
+            email:'sample01@email.com'
+        }
 
-// describe("Employee", () => {
-//     describe("Initialization", () => {
-//       it("should create an object with a name and age if provided valid arguments", () => {
-//         const mockInquirerOutput = {
+        const employee = new Employee(mockInquirerOutput);
+  
+        expect(employee.name).toEqual('John Doe');
+        expect(employee.id).toEqual('01');
+        expect(employee.email).toEqual('sample01@email.com');
+      });
+    })
+});
 
-//         }
-        
-        
-//         const employee = new Employee();
+//test inquirer validation
+describe("Employee - Inquirer", () => {
+    describe("Initialization", () => {
+      it("should create an Employee object if provided an object with valid arguments", () => {
+        const mockInquirerOutput = {
+            name:'John Doe',
+            id:'01',
+            email:'sample01@email.com'
+        }
+
+        const employee = new Employee(mockInquirerOutput);
   
-//         expect(child.name).toEqual("Sarah");
-//         expect(child.age).toEqual(3);
-//       });
+        expect(employee.name).toEqual('John Doe');
+        expect(employee.id).toEqual('01');
+        expect(employee.email).toEqual('sample01@email.com');
+      });
+    })
+    describe("Validation - name", () => {
+        it("should create an employee object if ", () => {
+          const mockInquirerOutput = {
+              name:'John Doe',
+              id:'01',
+              email:'sample01@email.com'
+          }
   
-//       it("should throw an error if provided no arguments", () => {
-//         const cb = () => new Child();
+          const employee = new Employee(mockInquirerOutput);
+    
+          expect(employee.name).toEqual('John Doe');
+          expect(employee.id).toEqual('01');
+          expect(employee.email).toEqual('sample01@email.com');
+        });
+      })
+      describe("Validation - ID", () => {
+        it("should create an Employee object if provided an object with valid arguments", () => {
+          const mockInquirerOutput = {
+              name:'John Doe',
+              id:'01',
+              email:'sample01@email.com'
+          }
   
-//         expect(cb).toThrow();
-//       });
+          const employee = new Employee(mockInquirerOutput);
+    
+          expect(employee.name).toEqual('John Doe');
+          expect(employee.id).toEqual('01');
+          expect(employee.email).toEqual('sample01@email.com');
+        });
+      })
+      describe("Validation - Email", () => {
+        it("should create an Employee object if provided an object with valid arguments", () => {
+          const mockInquirerOutput = {
+              name:'John Doe',
+              id:'01',
+              email:'sample01@email.com'
+          }
   
-//       it("should throw an error if not provided an age", () => {
-//         const cb = () => new Child("Sarah");
-//         const err = new Error("Expected parameter 'age' to be a non-negative number");
-  
-//         expect(cb).toThrowError(err);
-//       });
-  
-//       it("should throw an error if 'name' is not a string", () => {
-//         const cb = () => new Child(3, 2);
-//         const err = new Error("Expected parameter 'name' to be a non-empty string");
-  
-//         expect(cb).toThrowError(err);
-//       });
-  
-//       it("should throw an error if 'age' is not a number", () => {
-//         const cb = () => new Child("Sarah", "2");
-//         const err = new Error("Expected parameter 'age' to be a non-negative number");
-  
-//         expect(cb).toThrowError(err);
-//       });
-  
-//       it("should throw an error if 'age' is less than 0", () => {
-//         const cb = () => new Child("Sarah", -1);
-//         const err = new Error("Expected parameter 'age' to be a non-negative number");
-  
-//         expect(cb).toThrowError(err);
-//       });
-//     });
-//   });
+          const employee = new Employee(mockInquirerOutput);
+    
+          expect(employee.name).toEqual('John Doe');
+          expect(employee.id).toEqual('01');
+          expect(employee.email).toEqual('sample01@email.com');
+        });
+      })
+});
   

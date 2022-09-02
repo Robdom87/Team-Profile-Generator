@@ -25,7 +25,7 @@ function start() {
 function createManager() {
     return inquirer
         //ask the user the intial questions
-        .prompt(employeePromt('Manager'))
+        .prompt(employeePrompt('Manager'))
         .then(val => {
             //once the responses are received create a new object for this manager
             newManager = new Manager(val);
@@ -35,7 +35,7 @@ function createManager() {
 
 function createEngineer() {
     return inquirer
-        .prompt(employeePromt('Engineer'))
+        .prompt(employeePrompt('Engineer'))
         .then(val => {
             //once the responses are received create a new object for this engineer
             const newEngineer = new Engineer(val);
@@ -46,7 +46,7 @@ function createEngineer() {
 
 function createIntern() {
     return inquirer
-        .prompt(employeePromt('Intern'))
+        .prompt(employeePrompt('Intern'))
         .then(val => {
             //once the responses are received create a new object for this intern
             const newIntern = new Intern(val);
@@ -56,7 +56,7 @@ function createIntern() {
 }
 
 //all employee types prompt with dynamic 4th question
-function employeePromt(type) {
+function employeePrompt(type) {
     return [
         {
             type: 'input',
