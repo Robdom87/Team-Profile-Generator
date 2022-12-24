@@ -14,4 +14,4 @@ If the user chooses to finish, the html is created within the dist folder.
 The generator also comes along with a set of test that validates the functionality of the classes used. The test can be run with 'npm run test'.
 
 ## WalkThru Video
-https://drive.google.com/file/d/1nARA1useRWGVkeYpWBDLLd5yBDQSOK40/view
+[Link](https://drive.google.com/file/d/1nARA1useRWGVkeYpWBDLLd5yBDQSOK40/view)
